@@ -1,0 +1,15 @@
+﻿# data and secrets: never commit
+data/
+.env
+# environments and caches
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+~$*
+# trained models (pickles; rebuild with RETRAIN=1 in detection.ipynb)
+models/
+models_retrain/
+*.joblib
+# earlier runs that used the author's own mail, and local report tooling
+archive/
+report_build/

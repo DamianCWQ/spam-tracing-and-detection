@@ -1,0 +1,15 @@
+{
+  "runs": [
+    {
+      "utc": "2026-11-10T01:21:24+00:00",
+      "forced_rerun": false,
+      "rows": 1742,
+      "sklearn": "1.9.0",
+      "traced_all_csv_sha256": "d702629ee95f0bfd58ec168ff5ebd0bdba801beea9f249bc86cf34629a3bbec0",
+      "models_sha256": {
+        "svm_filter": "aadd19a93647d86b4ce92dea4c140291796537978efee4d400dd7fdfb4a7cd95",
+        "svm_maskonly": "3d096fc57503e0605b3a9be222be267e0e258958c28e128fce557ad74fe05115"
+      }
+    }
+  ]
+}

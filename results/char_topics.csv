@@ -1,0 +1,51 @@
+corpus,value,n,share,campaign_weighted
+all,adult,1,0.0006,0.0007
+all,advance fee / lottery,46,0.0264,0.0285
+all,credential phishing,579,0.3324,0.4246
+all,crypto / investment,31,0.0178,0.0282
+all,delivery / shipping,92,0.0528,0.07
+all,invoice / payment,141,0.0809,0.1133
+all,loans / finance,4,0.0023,0.0029
+all,marketing / offers,41,0.0235,0.0237
+all,non-English (unclassified),79,0.0454,0.061
+all,other,274,0.1573,0.1551
+all,pharma / health,379,0.2176,0.0513
+all,survey / reward,75,0.0431,0.0406
+guenter-2026-10,adult,1,0.0011,0.0022
+guenter-2026-10,advance fee / lottery,36,0.041,0.0586
+guenter-2026-10,credential phishing,63,0.0718,0.1082
+guenter-2026-10,crypto / investment,20,0.0228,0.0463
+guenter-2026-10,delivery / shipping,47,0.0536,0.0865
+guenter-2026-10,invoice / payment,25,0.0285,0.0648
+guenter-2026-10,loans / finance,3,0.0034,0.008
+guenter-2026-10,marketing / offers,37,0.0422,0.0645
+guenter-2026-10,non-English (unclassified),34,0.0388,0.0971
+guenter-2026-10,other,165,0.1881,0.1998
+guenter-2026-10,pharma / health,372,0.4242,0.1408
+guenter-2026-10,survey / reward,74,0.0844,0.1232
+nazario-2024,advance fee / lottery,5,0.0133,0.0141
+nazario-2024,credential phishing,224,0.5957,0.6159
+nazario-2024,crypto / investment,7,0.0186,0.0222
+nazario-2024,delivery / shipping,22,0.0585,0.0624
+nazario-2024,invoice / payment,50,0.133,0.1019
+nazario-2024,non-English (unclassified),15,0.0399,0.0493
+nazario-2024,other,51,0.1356,0.1297
+nazario-2024,pharma / health,2,0.0053,0.0044
+nazario-2025,advance fee / lottery,4,0.009,0.0157
+nazario-2025,credential phishing,273,0.6149,0.561
+nazario-2025,crypto / investment,3,0.0068,0.0118
+nazario-2025,delivery / shipping,23,0.0518,0.057
+nazario-2025,invoice / payment,66,0.1486,0.1618
+nazario-2025,marketing / offers,1,0.0023,0.0039
+nazario-2025,non-English (unclassified),16,0.036,0.026
+nazario-2025,other,57,0.1284,0.159
+nazario-2025,pharma / health,1,0.0023,0.0039
+phishing-pot,advance fee / lottery,1,0.0222,0.0167
+phishing-pot,credential phishing,19,0.4222,0.5083
+phishing-pot,crypto / investment,1,0.0222,0.05
+phishing-pot,loans / finance,1,0.0222,0.0071
+phishing-pot,marketing / offers,3,0.0667,0.0363
+phishing-pot,non-English (unclassified),14,0.3111,0.3333
+phishing-pot,other,1,0.0222,0.0071
+phishing-pot,pharma / health,4,0.0889,0.0286
+phishing-pot,survey / reward,1,0.0222,0.0125

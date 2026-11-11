@@ -1,0 +1,17 @@
+{
+  "runs": [
+    {
+      "utc": "2026-11-10T09:37:02+00:00",
+      "forced_rerun": false,
+      "spam_rows": 1742,
+      "ham_rows": 1720,
+      "sklearn": "1.9.0",
+      "traced_all_csv_sha256": "d702629ee95f0bfd58ec168ff5ebd0bdba801beea9f249bc86cf34629a3bbec0",
+      "ham_apache_csv_sha256": "4894667b3a602dcb4fec007027368fda67f71b0e4a4305766e3b299e8051e901",
+      "models_sha256": {
+        "nb": "7f3fe2f78495b2737c9ddf1b31c4b45ada859bfa2819d6c571d42f1ae708f5bb",
+        "lr": "7eafdffc0e12c848422f2e2b75ca67528c703967789cfd73b40f87aa218e9bd0"
+      }
+    }
+  ]
+}

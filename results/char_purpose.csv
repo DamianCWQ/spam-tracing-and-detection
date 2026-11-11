@@ -1,0 +1,13 @@
+topic,purpose,n
+adult,adult advertising or sextortion,1
+advance fee / lottery,advance-fee fraud,46
+credential phishing,credential theft / account takeover,579
+crypto / investment,investment fraud,31
+delivery / shipping,credential or card theft via fake delivery notice,92
+invoice / payment,"payment fraud (invoice, BEC) or malware lure",141
+loans / finance,fee fraud or lead generation,4
+marketing / offers,advertising / affiliate spam,41
+non-English (unclassified),not classified (keyword rules are English only),79
+other,unclear from text,274
+pharma / health,illegal or counterfeit goods sales,379
+survey / reward,lead harvesting or card/credential theft via fake reward,75

@@ -1,0 +1,4 @@
+model,recall_before,recall_after_normalising,specificity_before,specificity_after_normalising
+NaiveBayes,0.6596,0.6355,0.986,0.9855
+LogReg,0.7618,0.76,0.9814,0.982
+LinearSVM,0.7813,0.7801,0.9826,0.9831
