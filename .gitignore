@@ -13,3 +13,5 @@ models_retrain/
 # earlier runs that used the author's own mail, and local report tooling
 archive/
 report_build/
+# project notes, plan and Claude instructions (local only)
+docs/
