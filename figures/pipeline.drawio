@@ -1,0 +1,90 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="pipeline" name="Pipeline">
+    <mxGraphModel dx="1187" dy="620" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1187" pageHeight="620" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Three part backgrounds -->
+        <mxCell id="bg1" value="" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F7F7F7;strokeColor=#9A9A9A;dashed=1;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="1167" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="bg2" value="" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F7F7F7;strokeColor=#9A9A9A;dashed=1;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="10" y="206" width="1167" height="176" as="geometry" />
+        </mxCell>
+        <mxCell id="bg3" value="" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F7F7F7;strokeColor=#9A9A9A;dashed=1;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="10" y="402" width="1167" height="176" as="geometry" />
+        </mxCell>
+
+        <!-- Part titles -->
+        <mxCell id="p1" value="PART 1 · TRACING (A1) · Section 2.2" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=14;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="28" y="16" width="600" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" value="PART 2 · CHARACTERISATION (A2) · Section 3.1" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=14;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="28" y="212" width="600" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" value="PART 3 · DETECTION AND ANALYSIS (A3, A4) · Sections 2.3, 3.2, 3.3" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=14;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="28" y="408" width="700" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- Part 1: Tracing (all stages read raw messages) -->
+        <mxCell id="ingest" value="Ingest&lt;br&gt;4 spam archives&lt;br&gt;+ Apache ham" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#333333;strokeWidth=2;fillColor=#DCDCDC;fontSize=13;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="28" y="60" width="203" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="trace" value="Trace&lt;br&gt;Received chain,&lt;br&gt;SPF/DKIM/DMARC" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#333333;strokeWidth=2;fillColor=#DCDCDC;fontSize=13;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="291" y="60" width="203" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="enrich" value="Enrich&lt;br&gt;ip-api, AbuseIPDB,&lt;br&gt;VirusTotal, RDAP, DNS" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#333333;strokeWidth=2;fillColor=#DCDCDC;fontSize=13;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="555" y="60" width="203" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="campaigns" value="Campaigns&lt;br&gt;shared link, From,&lt;br&gt;IP or text" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#333333;strokeWidth=2;fillColor=#DCDCDC;fontSize=13;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="819" y="60" width="203" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="6 campaigns&lt;br&gt;in 60 traced" style="text;html=1;align=left;verticalAlign=middle;fontSize=13;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="1043" y="88" width="120" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- Part 2: Characterisation (Clean reads raw, Characterise reads cleaned text) -->
+        <mxCell id="clean" value="Clean text&lt;br&gt;strip HTML, redact,&lt;br&gt;defang links" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#333333;strokeWidth=2;fillColor=#DCDCDC;fontSize=13;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="28" y="256" width="203" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="characterise" value="Characterise&lt;br&gt;language, topic,&lt;br&gt;techniques" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#333333;strokeWidth=2;fillColor=#FFFFFF;fontSize=13;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="291" y="256" width="203" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Part 3: Detection and analysis (all stages read cleaned text only) -->
+        <mxCell id="train" value="Train&lt;br&gt;Enron + SpamAssassin&lt;br&gt;3 models" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#333333;strokeWidth=2;fillColor=#FFFFFF;fontSize=13;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="28" y="452" width="203" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="predict" value="Predict (once)&lt;br&gt;traced spam +&lt;br&gt;public ham" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#333333;strokeWidth=2;fillColor=#FFFFFF;fontSize=13;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="291" y="452" width="203" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="analyse" value="Analyse&lt;br&gt;metrics, errors,&lt;br&gt;evasion tests" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#333333;strokeWidth=2;fillColor=#FFFFFF;fontSize=13;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="555" y="452" width="203" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="defend" value="Defend&lt;br&gt;normalise,&lt;br&gt;compare" style="rounded=1;whiteSpace=wrap;html=1;arcSize=12;strokeColor=#333333;strokeWidth=2;fillColor=#FFFFFF;fontSize=13;fontColor=#222222;" vertex="1" parent="1">
+          <mxGeometry x="819" y="452" width="203" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="lg1" value="Grey box: reads raw messages (in memory, Python only)" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=13;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="28" y="586" width="520" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="lg2" value="White box: reads cleaned text and saved tables only" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=13;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="600" y="586" width="520" height="22" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="ingest" target="trace"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="trace" target="enrich"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="enrich" target="campaigns"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="ingest" target="clean"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="clean" target="characterise"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="clean" target="train"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="train" target="predict"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="predict" target="analyse"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#555555;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="analyse" target="defend"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
